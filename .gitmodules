@@ -1,0 +1,9 @@
+[submodule "jailhouse"]
+	path = jailhouse
+	url = git@github.com:qclic/jailhouse.git
+[submodule "yocto-meta-openeuler"]
+	path = yocto-meta-openeuler
+	url = git@github.com:qclic/yocto-meta-openeuler.git
+[submodule "sparreal-os"]
+	path = sparreal-os
+	url = git@github.com:qclic/sparreal-os.git
