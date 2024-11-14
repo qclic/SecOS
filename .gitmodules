@@ -7,6 +7,6 @@
 [submodule "sparreal-os"]
 	path = sparreal-os
 	url = git@github.com:qclic/sparreal-os.git
-[submodule "Docs"]
-	path = Docs
-	url = git@github.com:qclic/Docs.git
+[submodule "docs"]
+	path = docs
+	url = git@github.com:qclic/qclic.github.io.git
