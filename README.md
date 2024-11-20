@@ -1,8 +1,8 @@
 # 简介
-针对 AIoT 领域，构建一个注重安全的操作系统。
+一个专注于 AIoT 领域的安全操作系统内核。
 
 # 架构
-TODO
+![ARCH](https://qclic.github.io/img/secos.arch.svg)
 
 # 构建
 使用 openEuler Embedded 提供的 `oebuild` 构建和配置的工具来构建适用于树莓派 4B 或飞腾派的镜像。当前仅支持在 64 位的 x86 环境下进行构建，并且需要以普通用户执行 `oebuild` 命令。最低支持 Python3.8 版本，推荐 Python3.10。
