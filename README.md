@@ -1,33 +1,38 @@
-# 简介
-一个专注于 AIoT 领域的安全操作系统内核。
+<p align="center">
+    <img src="https://qclic.github.io/img/logo.svg" alt="secos-logo" width="64"><br>
+    A security operating system focused on the AIoT (Artificial Intelligence of Things) field.<br/>
+    <br/>
+</p>
 
-# 架构
+English | [中文版](README_CN.md)
+
+# Architecture
 ![ARCH](https://qclic.github.io/img/secos.arch.svg)
 
-# 构建
-使用 openEuler Embedded 提供的 `oebuild` 构建和配置的工具来构建适用于树莓派 4B 或飞腾派的镜像。当前仅支持在 64 位的 x86 环境下进行构建，并且需要以普通用户执行 `oebuild` 命令。最低支持 Python3.8 版本，推荐 Python3.10。
+# Build
+Currently built based on openEuler and Jailhouse
 
-## 安装依赖
-openEuler: `sudo dnf install python3 python3-pip docker`
-Ubuntu: `sudo apt install python3 python3-pip docker`
+## Build linux image
+Use the oebuild tool provided by openEuler Embedded to build and configure the Linux image. First, install the dependencies. For openEuler systems, use the command `sudo dnf install python3 python3-pip docker` to install the required packages. For Ubuntu systems, use the command `sudo apt install python3 python3-pip docker` to install them.
+1. Use the command `oebuild init -u https://gitee.com/itexp/yocto-meta-openeuler.git <build_baord_folder> && cd $_` to create the directory for the oebuild workspace.
+    - `<build_baord_folder>`: The folder that stores the build output for the specified development board.
+2. Execute `oebuild update` to prepare the initial environment.
+3. Execute `oebuild generate -p <build_board> -d <build_folder>` to generate the build directory and the configuration file `compile.yaml`
+    - `<build_board>`: Currently, it supports phytiumpi or raspberrypi4-64
+    - `<build_folder>`: The folder that stores the build output.
+4. Execute the `oebuild bitbake` command to enter the build container environment.
+5. Execute `bitbake openeuler-image` to start the build process.
 
-## 构建 Linux 镜像
+## Build ArceOS image
+ArceOS is developed using the Rust programming language. First, please install the Rust development environment according to the official [Rust website](https://www.rust-lang.org/).
 
-1. 使用 `oebuild init -u https://gitee.com/itexp/yocto-meta-openeuler.git openeuler_phytium && cd $_` 命令创建 oebuild 工作要使用的目录。
-2. 执行 `oebuild update` 进行初期环境的准备。
-3. 执行 `oebuild generate -p phytiumpi -d build_phytium` 生成构建目录以及配置文件 compile.yaml
-4. 执行 `oebuild bitbake` 命令进入构建容器环境。
-5. 执行 `bitbake openeuler-image` 启动构建。
+1. Use the command `cargo install ostool` to install the dependencies.
+2. Use the command `ostool build` to build the project.
 
-## 构建 ArceOS 镜像
-TODO
+# Documents
 
-# 部署
-TODO
+For more information about the project, check out [The SecOS Book](https://qclic.github.io/).
 
-## 烧写 Linux 镜像
-TODO
+# License
 
-# 验证
-
-TODO
+The source code and documentation of SecOS are primarily licensed under the MIT License, while some components retain their original open-source licenses.
