@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://qclic.github.io/img/logo.svg" alt="secos-logo" width="64"><br>
+    <img src="https://qclic.github.io/images/site/logo.svg" alt="secos-logo" width="64"><br>
     一个专注于 AIoT 领域的安全操作系统<br/>
     <br/>
 </p>
@@ -7,7 +7,7 @@
 [English](README.md) | 中文版
 
 # 架构
-![ARCH](https://qclic.github.io/img/secos.arch.svg)
+![ARCH](https://qclic.github.io/images/homepage/secos.arch.svg)
 
 # 构建
 目前基于 openEuler 和 Jailhouse 构建。首先通过 `git clone --recursive git@github.com:qclic/SecOS.git` 拉取源代码。

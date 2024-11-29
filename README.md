@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://qclic.github.io/img/logo.svg" alt="secos-logo" width="64"><br>
+    <img src="https://qclic.github.io/images/site/logo.svg" alt="secos-logo" width="64"><br>
     A security operating system focused on the AIoT (Artificial Intelligence of Things) field.<br/>
     <br/>
 </p>
@@ -7,7 +7,7 @@
 English | [中文版](README_CN.md)
 
 # Architecture
-![ARCH](https://qclic.github.io/img/secos.arch.svg)
+![ARCH](https://qclic.github.io/images/homepage/secos.arch.svg)
 
 # Build
 Currently built based on openEuler and Jailhouse. Firstly, pull the source code by `git clone --recursive git@github.com:qclic/SecOS.git`.
